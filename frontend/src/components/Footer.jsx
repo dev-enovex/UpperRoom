@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import styles from './Footer.module.css';
+export default function Footer(){return <footer className={styles.footer}><div className={styles.inner}><div><div className={styles.brand}>UPPERROOM <span>SOAR SUMMIT</span></div><p>A gathering for faith, purpose, growth and kingdom impact.</p></div><div><strong>Explore</strong><Link to="/about">About us</Link><Link to="/events">Events</Link><Link to="/account">My account</Link></div><div><strong>Connect</strong><a href="mailto:hello@upperroomsoar.com">hello@upperroomsoar.com</a><span>Nigeria</span></div></div><div className={styles.bottom}>© {new Date().getFullYear()} UpperRoom SOAR Company. All rights reserved.</div></footer>}

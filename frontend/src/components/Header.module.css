@@ -1,0 +1,10 @@
+.header { background:#10182d; color:white; position:sticky; top:0; z-index:10; border-bottom:1px solid #ffffff18; }
+.inner { max-width:1180px; margin:auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.brand { display:flex; align-items:center; gap:10px; color:white; font-weight:700; letter-spacing:.13em; font-size:12px; }
+.brand small { display:block; color:#d8b85c; font-size:9px; letter-spacing:.25em; margin-top:4px; }
+.mark { display:grid; place-items:center; width:38px; height:38px; border:1px solid #d8b85c; color:#d8b85c; border-radius:50%; font-family:Georgia; font-size:15px; letter-spacing:0; }
+.nav { display:flex; gap:30px; } .nav a,.login,.account { color:#e5e7ef; font-size:13px; }
+.nav a.active { color:#e3c66f; }
+.actions { display:flex; align-items:center; gap:18px; } .cta { background:#d8b85c; color:#10182d; padding:12px 17px; border-radius:3px; font-size:12px; font-weight:700; }
+.login { background:none; border:0; cursor:pointer; }
+@media(max-width:700px){.inner{padding:13px 16px;flex-wrap:wrap}.nav{order:3;width:100%;justify-content:center;gap:24px}.actions{margin-left:auto}.account{display:none}.cta{padding:10px 12px}}

@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},event:{type:mongoose.Schema.Types.ObjectId,ref:'Event',required:true},ticketTypeId:{type:mongoose.Schema.Types.ObjectId,required:true},ticketType:String,quantity:{type:Number,default:1,min:1,max:10},amount:{type:Number,required:true},currency:{type:String,default:'NGN'},provider:{type:String,enum:['paystack','flutterwave'],required:true},reference:{type:String,required:true,unique:true},status:{type:String,enum:['pending','paid','failed'],default:'pending'},providerTransactionId:String},{timestamps:true});
+export default mongoose.model('Order',schema);

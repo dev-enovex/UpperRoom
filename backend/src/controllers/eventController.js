@@ -1,0 +1,4 @@
+import Event from '../models/Event.js';
+export async function listEvents(req,res){const filter=req.query.all==='true'&&req.user?.role==='admin'?{}:{status:'published'};const events=await Event.find(filter).sort({date:1});res.json({events});}
+export async function getEvent(req,res){const event=await Event.findById(req.params.id);if(!event||event.status!=='published'&&req.user?.role!=='admin')return res.status(404).json({message:'Event not found.'});res.json({event});}
+export async function createEvent(req,res){const {title,description,date,venue,status,ticketTypes=[]}=req.body;if(!title)return res.status(400).json({message:'Event title is required.'});const event=await Event.create({title,description,date:date||undefined,venue,status,ticketTypes,createdBy:req.user._id});res.status(201).json({event});}
