@@ -4,6 +4,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Vision from './pages/Vision';
+import Initiatives from './pages/Initiatives';
+import Leadership from './pages/Leadership';
+import Connect from './pages/Connect';
+import Partner from './pages/Partner';
 import Events from './pages/Events';
 import EventDetails from './pages/EventDetails';
 import Auth from './pages/Auth';
@@ -13,15 +18,22 @@ import styles from './App.module.css';
 
 function Guard({ children, admin = false }) {
   const { user, loading } = useAuth();
-  if (loading) return <div className={styles.loading}>Preparing your UpperRoom experience…</div>;
+  if (loading) return <div className={styles.loading}>Preparing your Upper Room experience…</div>;
   if (!user) return <Navigate to="/account" replace />;
   if (admin && user.role !== 'admin') return <Navigate to="/dashboard" replace />;
   return children;
 }
 export default function App() {
   return <><Header /><main className={styles.main}><Routes>
-    <Route path="/" element={<Home />} /><Route path="/about" element={<About />} />
-    <Route path="/events" element={<Events />} /><Route path="/events/:id" element={<EventDetails />} />
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/vision" element={<Vision />} />
+    <Route path="/initiatives" element={<Initiatives />} />
+    <Route path="/leadership" element={<Leadership />} />
+    <Route path="/connect" element={<Connect />} />
+    <Route path="/partner" element={<Partner />} />
+    <Route path="/events" element={<Events />} />
+    <Route path="/events/:id" element={<EventDetails />} />
     <Route path="/account" element={<Auth />} />
     <Route path="/dashboard" element={<Guard><Dashboard /></Guard>} />
     <Route path="/admin" element={<Guard admin><Admin /></Guard>} />

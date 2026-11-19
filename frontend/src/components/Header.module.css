@@ -1,10 +1,25 @@
-.header { background:#10182d; color:white; position:sticky; top:0; z-index:10; border-bottom:1px solid #ffffff18; }
-.inner { max-width:1180px; margin:auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-.brand { display:flex; align-items:center; gap:10px; color:white; font-weight:700; letter-spacing:.13em; font-size:12px; }
-.brand small { display:block; color:#d8b85c; font-size:9px; letter-spacing:.25em; margin-top:4px; }
-.mark { display:grid; place-items:center; width:38px; height:38px; border:1px solid #d8b85c; color:#d8b85c; border-radius:50%; font-family:Georgia; font-size:15px; letter-spacing:0; }
-.nav { display:flex; gap:30px; } .nav a,.login,.account { color:#e5e7ef; font-size:13px; }
-.nav a.active { color:#e3c66f; }
-.actions { display:flex; align-items:center; gap:18px; } .cta { background:#d8b85c; color:#10182d; padding:12px 17px; border-radius:3px; font-size:12px; font-weight:700; }
+.header { background:#10182d; color:white; position:sticky; top:0; z-index:20; border-bottom:1px solid #ffffff20; }
+.inner { max-width:1320px; margin:auto; padding:10px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.brand { display:flex; align-items:center; flex:0 0 auto; }
+.brand img { display:block; width:118px; height:72px; object-fit:contain; }
+.nav { display:flex; align-items:center; justify-content:center; gap:clamp(10px,1.25vw,20px); flex-wrap:wrap; }
+.nav a,.login,.account { color:#e5e7ef; font-size:12px; white-space:nowrap; }
+.nav a.active,.nav a:hover { color:#e3c66f; }
+.actions { display:flex; align-items:center; gap:14px; flex:0 0 auto; }
+.cta { background:#d8b85c; color:#10182d; padding:11px 14px; border-radius:2px; font-size:11px; font-weight:700; white-space:nowrap; }
 .login { background:none; border:0; cursor:pointer; }
-@media(max-width:700px){.inner{padding:13px 16px;flex-wrap:wrap}.nav{order:3;width:100%;justify-content:center;gap:24px}.actions{margin-left:auto}.account{display:none}.cta{padding:10px 12px}}
+@media(max-width:1000px) {
+ .inner { flex-wrap:wrap; justify-content:center; }
+ .brand { margin-right:auto; }
+ .actions { margin-left:auto; }
+ .nav { order:3; width:100%; padding:6px 0 8px; }
+}
+@media(max-width:560px) {
+ .inner { padding:8px 12px; gap:8px; }
+ .brand img { width:92px; height:58px; }
+ .nav { gap:10px 16px; justify-content:flex-start; }
+ .nav a { font-size:11px; }
+ .actions { gap:9px; }
+ .cta { padding:9px 10px; font-size:10px; }
+ .login,.account { font-size:11px; }
+}

@@ -1,28 +1,51 @@
-# UpperRoom Soar Summit
+# Upper Room SOAR Company — Website
 
-A local-development starter for the UpperRoom Soar Summit event and ticketing platform.
+A local-development React and Express website for Upper Room SOAR Company and the SOAR Summit.
+
+## Brand and content update
+- Uses the official Upper Room SOAR Summit logo supplied by the project owner at `frontend/public/upperroom-soar-logo.png`.
+- Uses the supplied `ABOUT UPPER ROOM SOAR COMPANY.docx` as the source for the organisation's public-facing content.
+- Includes dedicated pages for About, Vision & Mission, Initiatives, Leadership, Get Connected, Partnership, and Events.
+- Retains the account registration, attendee dashboard, event ticket selection, Paystack and Flutterwave checkout foundation.
+
+## Frontend pages
+- Home
+- About Upper Room
+- Our Vision & Mission (including all six vision pillars)
+- Our Initiatives (SOAR Summit, Community Outreach, SOAR Academy, Fellowship and Discipleship)
+- Leadership (Ijoma, Chisom Jessica)
+- Get Connected (fellowship, discipleship, mentorship and outreach volunteering)
+- Partner With Us (six partnership pathways and the Benue IDP outreach account)
+- Events and event details
+- Account registration/sign-in, attendee dashboard and admin event management
 
 ## Stack
 - Frontend: React + Vite + JavaScript + CSS Modules
 - Backend: Node.js + Express + MongoDB/Mongoose
 - Authentication: bcrypt + JWT
 - Payments: Paystack and Flutterwave server-side initialization and verification
-- Ticketing: QR-code payload generation (PNG endpoint) and PDF ticket download
+- Ticketing: QR-code payload generation and PDF ticket download
 
 ## Requirements
-Node.js 20+, npm, and MongoDB (local MongoDB or MongoDB Atlas).
+- Node.js 20+
+- npm
+- MongoDB (local MongoDB or MongoDB Atlas)
 
 ## Run locally
+
 Open two terminals.
 
 ### 1. Backend
 ```bash
 cd backend
-cp .env.example .env
 npm install
+```
+Copy `backend/.env.example` to `backend/.env`, then set `MONGODB_URI` and `JWT_SECRET`.
+
+Start the API:
+```bash
 npm run dev
 ```
-Set `MONGODB_URI` and `JWT_SECRET` in `backend/.env`. Add payment keys and email settings when ready.
 
 ### 2. Frontend
 ```bash
@@ -30,27 +53,25 @@ cd frontend
 npm install
 npm run dev
 ```
-Open http://localhost:5173.
+Open the local Vite address shown in the terminal (normally http://localhost:5173).
 
-## Create the first admin
-Register a normal account through the UI. Then use MongoDB Compass or mongosh to promote that account:
+## First admin account
+Register an account through the website, then promote it in MongoDB Compass or mongosh:
 ```js
 use upperroom_soar_summit
 db.users.updateOne({ email: "you@example.com" }, { $set: { role: "admin" } })
 ```
-Never expose admin role assignment in a public registration endpoint.
+Do not expose admin role assignment in public registration.
 
 ## Payment setup
-- Paystack: set `PAYSTACK_SECRET_KEY`.
-- Flutterwave: set `FLUTTERWAVE_SECRET_KEY`.
+- Paystack: set `PAYSTACK_SECRET_KEY` in `backend/.env`.
+- Flutterwave: set `FLUTTERWAVE_SECRET_KEY` and `FLUTTERWAVE_SECRET_HASH`.
 - Set `CLIENT_URL` to the frontend origin.
-- Use test credentials first. Payment callbacks are not proof of payment: the backend verifies transactions with the provider before marking an order paid.
-- Configure provider dashboard webhook URLs to `POST /api/payments/paystack/webhook` and `POST /api/payments/flutterwave/webhook`. Webhook handlers validate provider signatures before processing.
+- Use provider test credentials first. The backend must verify provider transactions before treating orders as paid.
+- Configure webhook URLs in the provider dashboards as documented in the original payment controller/API routes.
 
-## Important production work
-This is a runnable foundation, not a production certification. Before a public launch:
-- configure HTTPS, secure secrets, backups, monitoring and a production mail provider;
-- test provider test-mode flows and webhook retries end-to-end;
-- review privacy/consent, refund, tax and event terms;
-- add email verification, password reset, audit logs and rate limits appropriate to traffic;
-- set event-specific dates, venue, speakers, ticket inventory and refund policy.
+## Notes
+- The source archive intentionally excludes `node_modules`; run `npm install` in both `frontend` and `backend` on your computer.
+- Event dates, venue details, speakers, ticket inventory, and contact channels should be confirmed and entered by the site administrator before public launch.
+- The leadership page currently uses a branded placeholder treatment rather than a portrait because the supplied project ZIP did not contain a separate portrait image.
+- This is a development foundation, not a production security or payment certification. Test payment callbacks, webhook signatures, email delivery, ticket issuing and PDF/QR downloads end-to-end before launch.
