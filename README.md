@@ -17,6 +17,7 @@ A local-development React and Express website for Upper Room SOAR Company and th
 - Get Connected (fellowship, discipleship, mentorship and outreach volunteering)
 - Partner With Us (six partnership pathways and the Benue IDP outreach account)
 - Events and event details
+- Summit Gallery featuring 20 selected photographs from the previous year's gathering
 - Account registration/sign-in, attendee dashboard and admin event management
 
 ## Stack
@@ -75,3 +76,6 @@ Do not expose admin role assignment in public registration.
 - Event dates, venue details, speakers, ticket inventory, and contact channels should be confirmed and entered by the site administrator before public launch.
 - The leadership page currently uses a branded placeholder treatment rather than a portrait because the supplied project ZIP did not contain a separate portrait image.
 - This is a development foundation, not a production security or payment certification. Test payment callbacks, webhook signatures, email delivery, ticket issuing and PDF/QR downloads end-to-end before launch.
+
+## Summit gallery
+Twenty selected photographs from the supplied previous-summit photo archive are included in `frontend/public/gallery/` and displayed on the `/gallery` page. The gallery is linked from the main navigation and footer.

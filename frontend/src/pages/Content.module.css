@@ -22,8 +22,11 @@
 .initiativeList p{font-size:14px;line-height:1.9;color:#687083;max-width:790px}
 .initiativeList blockquote{border-left:2px solid #c7a64f;padding-left:18px;color:#48536a;line-height:1.8;font-size:13px;max-width:780px}
 .inlineAction,.connectGrid a,.partnerGrid a,.partnerClosing a{display:inline-flex;align-items:center;gap:8px;color:#8a6a23;font-weight:700;font-size:12px;margin-top:8px}
-.profileLayout{display:grid;grid-template-columns:270px 1fr;gap:55px;align-items:start;margin-top:48px}
-.profileMonogram{height:340px;background:linear-gradient(145deg,#172440,#0c1324);color:#d8b85c;display:flex;align-items:center;justify-content:center;flex-direction:column;font:600 52px 'Playfair Display';letter-spacing:.08em}
+.profileLayout{display:grid;grid-template-columns:minmax(280px,380px) minmax(0,1fr);gap:48px;align-items:start;margin-top:48px}
+.profilePhoto{margin:0;position:relative;top:auto;width:100%;max-width:380px;background:#10182d;overflow:hidden;border:1px solid #e6dfcf;box-shadow:0 18px 45px #10182d18}
+.profilePhoto img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center center;background:#10182d}
+.profilePhoto figcaption{display:flex;flex-direction:column;gap:5px;padding:16px 18px;color:#e3c66f;font-size:11px;font-weight:700;letter-spacing:.12em}
+.profilePhoto figcaption span{color:#c6cad4;font-size:9px;letter-spacing:.2em}
 .profileMonogram span{font:700 9px 'DM Sans';letter-spacing:.2em;margin-top:12px}
 .profileLayout .prose{margin-top:0}
 .profileLayout .prose h2{margin-top:0}
@@ -39,4 +42,4 @@
 .partnerClosing h2{font:600 29px 'Playfair Display';margin:0 0 14px}
 .partnerClosing p{font-size:14px;line-height:1.8;color:#c6cad4;max-width:820px}
 .partnerClosing a{color:#e3c66f}
-@media(max-width:760px){.page{padding:65px 20px 80px}.pillarList,.connectGrid,.partnerGrid{grid-template-columns:1fr}.profileLayout{grid-template-columns:1fr;gap:25px}.profileMonogram{height:210px}.initiativeList article{grid-template-columns:55px 1fr;gap:14px}.initiativeIcon{width:48px;height:48px}}
+@media(max-width:760px){.page{padding:65px 20px 80px}.pillarList,.connectGrid,.partnerGrid{grid-template-columns:1fr}.profileLayout{grid-template-columns:minmax(0,1fr);gap:25px}.profilePhoto{position:relative;top:auto;max-width:420px;margin:0 auto;width:100%}.profilePhoto img{height:auto;max-height:none;object-fit:contain}.initiativeList article{grid-template-columns:55px 1fr;gap:14px}.initiativeIcon{width:48px;height:48px}}
