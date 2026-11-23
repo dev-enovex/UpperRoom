@@ -79,3 +79,24 @@ Do not expose admin role assignment in public registration.
 
 ## Summit gallery
 Twenty selected photographs from the supplied previous-summit photo archive are included in `frontend/public/gallery/` and displayed on the `/gallery` page. The gallery is linked from the main navigation and footer.
+
+## Book Library
+- Public route: `/library`.
+- The catalogue is organised using all 12 main categories and their subcategories from the supplied `book.docx`.
+- Admin users can add approved books and reading resources from `/admin` → Book library. Provide a publicly reachable PDF/reading URL and optional cover image URL.
+- The uploaded Word document supplied subject categories only; it did not contain book titles or book files. The public library therefore starts with the category structure and shows resources after the team adds them.
+
+## SOAR Academy
+- Public route: `/academy`.
+- Includes starter technology learning pathways: Web Development, UI/UX and Product Design, AI and Productivity, Data Analytics, Cybersecurity Fundamentals, and Digital Skills/Digital Marketing.
+- Signed-in users can submit enrolment interest with their contact details, experience level and learning goals.
+- Admin users can review enquiries and update their follow-up status from `/admin` → Academy enrolments.
+- Course dates, fees, curriculum, delivery format and scholarship availability are not advertised as confirmed; the Academy team can communicate these per cohort.
+
+## SOAR Academy learning portal
+- `/academy` lists the learning tracks and accepts signed-in enrolment enquiries.
+- `/academy/learning` is the protected student classroom. Only learners whose enrolment status is set to `enrolled` by an administrator can see course content.
+- Admins can publish courses and lessons under `/admin` → Academy courses. Add lessons one per line using: `Lesson title | Video URL (optional) | Resource URL (optional)`.
+- Admins review learner enquiries under `/admin` → Academy enrolments and set the status to `enrolled` to grant classroom access.
+- Students can open lesson videos/resources, mark lessons complete, view progress, and print a completion certificate once all lessons are complete.
+- Certificate output is a printable browser document, not a digitally signed credential. The Academy should verify learner identity and completion records before formally recognising certificates.

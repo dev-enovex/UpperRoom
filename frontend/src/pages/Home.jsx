@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className={styles.note}>WE TARRY IN THE UPPER ROOM. OUR INFLUENCE EXTENDS BEYOND IT.</div>
       </div>
-      <div className={styles.heroLogo}><img src="/upperroom-soar-logo.png" alt="Upper Room SOAR Summit official emblem"/></div>
+      <div className={styles.heroLogo}><img src="/OLA_2693.JPG" alt="Upper Room SOAR Summit official emblem"/></div>
     </section>
 
     <section className={styles.intro}>

@@ -28,7 +28,7 @@ export default function Gallery() {
     <section className={styles.page}>
       <div className={styles.heading}>
         <span className={styles.kicker}>MEMORIES THAT INSPIRE PURPOSE</span>
-        <h1>Moments from <em>SOAR Summit</em></h1>
+        <h1>Moments from <em>UpperRoom SOAR Summit 2025</em></h1>
         <p>Take a look back at moments of learning, fellowship, worship and shared purpose from last year's summit.</p>
       </div>
       <div className={styles.grid}>

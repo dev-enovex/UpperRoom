@@ -2,9 +2,9 @@
 .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 48%,#c9a54225,transparent 36%);pointer-events:none}
 .heroInner{max-width:1250px;width:100%;margin:auto;padding:85px 30px;position:relative;z-index:2}
 .eyebrow,.kicker{font-size:10px;letter-spacing:.24em;color:#d9bd69;font-weight:700}
-.hero h1{font:600 clamp(43px,6vw,78px)/1.08 'Playfair Display',serif;letter-spacing:-.035em;margin:24px 0;max-width:760px}
+.hero h1{font:600 clamp(43px,6vw,70px)/1.08 'Playfair Display',serif;letter-spacing:-.035em;margin:24px 0;max-width:760px}
 .hero h1 em,.intro h2 em,.sectionHead h2 em,.callout h2 em{color:#dfc16a;font-weight:500}
-.lead{max-width:650px;color:#c2c8d5;font-size:15px;line-height:1.9}
+.lead{max-width:650px;color:#c2c8d5;font-size:15px;line-height:1.9; text-align: justify;}
 .buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
 .gold,.outline{display:inline-flex;align-items:center;gap:12px;padding:14px 19px;font-size:12px;font-weight:700}
 .gold{background:#d8b85c;color:#10182d}.outline{border:1px solid #ffffff55;color:white}
@@ -34,6 +34,6 @@
 .callout h2{color:white}
 .callout p{max-width:600px;margin:0 auto}
 .callout .buttons{justify-content:center}
-@media(max-width:900px){.heroLogo{right:-3%;width:38vw;opacity:.38}.heroInner{padding-right:25px}.initiativeGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.heroLogo{right:-3%;width:38vw;opacity:.38; }.heroInner{padding-right:25px}.initiativeGrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.hero{min-height:570px}.heroLogo{width:70vw;right:-15%;top:52%;opacity:.2}.heroInner{padding:75px 22px}.intro{grid-template-columns:1fr;gap:15px;padding:70px 22px}.pillarGrid{grid-template-columns:1fr 1fr}.pillars,.initiatives{padding:70px 22px}.initiativeGrid{grid-template-columns:1fr 1fr}.note{line-height:1.8}}
 @media(max-width:420px){.pillarGrid,.initiativeGrid{grid-template-columns:1fr}}

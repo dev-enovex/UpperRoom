@@ -11,6 +11,9 @@ import Connect from './pages/Connect';
 import Partner from './pages/Partner';
 import Events from './pages/Events';
 import Gallery from './pages/Gallery';
+import Library from './pages/Library';
+import Academy from './pages/Academy';
+import AcademyLearning from './pages/AcademyLearning';
 import EventDetails from './pages/EventDetails';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
@@ -35,6 +38,9 @@ export default function App() {
     <Route path="/partner" element={<Partner />} />
     <Route path="/events" element={<Events />} />
     <Route path="/gallery" element={<Gallery />} />
+    <Route path="/library" element={<Library />} />
+    <Route path="/academy" element={<Academy />} />
+    <Route path="/academy/learning" element={<Guard><AcademyLearning /></Guard>} />
     <Route path="/events/:id" element={<EventDetails />} />
     <Route path="/account" element={<Auth />} />
     <Route path="/dashboard" element={<Guard><Dashboard /></Guard>} />

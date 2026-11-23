@@ -1,0 +1,12 @@
+import {Router} from 'express';
+import {listCourses,createCourse,createEnrollment,listEnrollments,updateEnrollment,myLearning,completeLesson} from '../controllers/academyController.js';
+import {protect,adminOnly} from '../middleware/auth.js';
+const r=Router();
+r.get('/courses',listCourses);
+r.post('/courses',protect,adminOnly,createCourse);
+r.post('/enrollments',protect,createEnrollment);
+r.get('/enrollments',protect,adminOnly,listEnrollments);
+r.patch('/enrollments/:id',protect,adminOnly,updateEnrollment);
+r.get('/my-learning',protect,myLearning);
+r.post('/courses/:courseId/lessons/:lessonId/complete',protect,completeLesson);
+export default r;

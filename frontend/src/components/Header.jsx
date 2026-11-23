@@ -16,6 +16,8 @@ export default function Header() {
         <NavLink to="/initiatives">Initiatives</NavLink>
         <NavLink to="/events">Events</NavLink>
         <NavLink to="/gallery">Gallery</NavLink>
+        <NavLink to="/library">Library</NavLink>
+        <NavLink to="/academy">SOAR Academy</NavLink>
         <NavLink to="/leadership">Leadership</NavLink>
         <NavLink to="/connect">Get Connected</NavLink>
         <NavLink to="/partner">Partner</NavLink>
