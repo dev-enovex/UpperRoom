@@ -71,7 +71,7 @@ export default function Partner() {
 
           <figure className={partnerStyles.partnerIntroPhoto}>
             <img
-              src="/partner-outreach.jpeg"
+              src="/gallery/IMG_9540.PNG"
               alt="Upper Room SOAR community outreach activities"
             />
 
