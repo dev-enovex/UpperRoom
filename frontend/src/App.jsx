@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Vision from './pages/Vision';
@@ -28,7 +29,7 @@ function Guard({ children, admin = false }) {
   return children;
 }
 export default function App() {
-  return <><Header /><main className={styles.main}><Routes>
+  return <><ScrollToTop /><Header /><main className={styles.main}><Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/vision" element={<Vision />} />

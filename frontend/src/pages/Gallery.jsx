@@ -1,3 +1,4 @@
+
 import styles from './Gallery.module.css';
 
 const moments = [
@@ -26,20 +27,42 @@ const moments = [
 export default function Gallery() {
   return (
     <section className={styles.page}>
+
+      {/* TOP BANNER */}
       <div className={styles.heading}>
-        <span className={styles.kicker}>MEMORIES THAT INSPIRE PURPOSE</span>
-        <h1>Moments from <em>UpperRoom SOAR Summit 2025</em></h1>
-        <p>Take a look back at moments of learning, fellowship, worship and shared purpose from last year's summit.</p>
+        <div className={styles.headingContent}>
+          <h1>Moments that bring<br />us together</h1>
+        </div>
       </div>
-      <div className={styles.grid}>
-        {moments.map(([src, alt], index) => (
-          <figure className={styles.photo} key={src}>
-            <img src={`/gallery/${src}`} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
-            <figcaption><span>UPPER ROOM SOAR</span><span>{String(index + 1).padStart(2, '0')}</span></figcaption>
-          </figure>
-        ))}
+
+      {/* GALLERY BODY */}
+      <div className={styles.galleryContent}>
+        <p className={styles.intro}>
+          Take a look back at moments of learning, fellowship, worship and
+          shared purpose from last year's summit.
+        </p>
+
+        <div className={styles.grid}>
+          {moments.map(([src, alt], index) => (
+            <figure className={styles.photo} key={src}>
+              <img
+                src={`/gallery/${src}`}
+                alt={alt}
+                loading={index < 4 ? 'eager' : 'lazy'}
+              />
+              <figcaption>
+                <span>UPPER ROOM SOAR</span>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <p className={styles.note}>
+          A collection of moments from our previous gathering. More memories
+          will be added as our journey continues.
+        </p>
       </div>
-      <p className={styles.note}>A collection of moments from our previous gathering. More memories will be added as our journey continues.</p>
     </section>
   );
 }

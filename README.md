@@ -74,7 +74,10 @@ Do not expose admin role assignment in public registration.
 ## Notes
 - The source archive intentionally excludes `node_modules`; run `npm install` in both `frontend` and `backend` on your computer.
 - Event dates, venue details, speakers, ticket inventory, and contact channels should be confirmed and entered by the site administrator before public launch.
-- The leadership page currently uses a branded placeholder treatment rather than a portrait because the supplied project ZIP did not contain a separate portrait image.
+- The Leadership page uses the supplied portrait at `frontend/public/chisom-ijoma.jpeg`.
+- The public navigation uses the logo as the Home link; Initiatives and Leadership are grouped under the About dropdown.
+- Internal route changes, including footer links, automatically return the visitor to the top of the destination page.
+- Public information pages use consistent full-width photographic page banners and responsive content layouts.
 - This is a development foundation, not a production security or payment certification. Test payment callbacks, webhook signatures, email delivery, ticket issuing and PDF/QR downloads end-to-end before launch.
 
 ## Summit gallery

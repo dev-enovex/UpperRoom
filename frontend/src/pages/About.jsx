@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import styles from './Content.module.css';
 export default function About() {
   return <section className={styles.page}>
-    <span className={styles.kicker}>ABOUT UPPER ROOM SOAR COMPANY</span>
+    <header className={styles.pageHero}><span className={styles.kicker}>ABOUT UPPER ROOM SOAR COMPANY</span>
     <h1>Who <em>We Are</em></h1>
-    <p className={styles.lead}>A Christ-centred discipleship and development platform.</p>
+    <p className={styles.lead}>A Christ-centred discipleship and development platform.</p></header>
     <div className={styles.prose}>
       <p>Upper Room SOAR Company is a Christ-centred discipleship and development platform committed to raising spiritually empowered, biblically grounded and practically responsible believers who will advance the cause of God's Kingdom beyond the four walls of the church.</p>
       <p>We believe that the mandate of the believer extends beyond the confines of religious gatherings into the different spheres of human influence. God's redemptive purpose in Christ is not limited to individuals or the activities of the Church; it encompasses all things, for the ultimate purpose of God is to gather together all things in Christ (Ephesians 1:10).</p>

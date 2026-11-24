@@ -1,3 +1,224 @@
-.page{max-width:1200px;margin:auto;padding:88px 24px 105px;min-height:650px}.heading{max-width:10000px;margin-bottom:44px}
-.kicker{font-size:10px;letter-spacing:.23em;color:#ad8731;font-weight:700}
-.heading h1{font:600 clamp(40px,6vw,66px) 'Playfair Display';color:#17213b;margin:14px 0}.heading h1 em{color:#ad8731}.heading p{max-width:650px;color:#737b8c;line-height:1.8;font-size:15px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.photo{margin:0;position:relative;overflow:hidden;background:#10182d;min-height:190px;aspect-ratio:4/3}.photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.photo:hover img{transform:scale(1.045)}.photo figcaption{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;align-items:center;padding:28px 13px 12px;background:linear-gradient(transparent,#080d18bd);color:#fff;font-size:9px;letter-spacing:.14em;font-weight:700}.photo figcaption span:last-child{color:#e2c36d}.note{margin-top:30px;color:#7a8190;font-size:12px;line-height:1.7}@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}}@media(max-width:600px){.page{padding:65px 18px 80px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo{min-height:135px}.photo figcaption{font-size:8px;padding:24px 9px 9px}}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  min-height: 650px;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+/* TOP BANNER */
+
+.heading {
+  width: 100%;
+  min-height: 225px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 16, 31, 0.88) 0%,
+      rgba(9, 16, 31, 0.58) 48%,
+      rgba(9, 16, 31, 0.18) 100%
+    ),
+    url('conference.jpg') center 45% / cover no-repeat;
+}
+
+.headingContent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 24px;
+}
+
+.heading h1 {
+  max-width: 600px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(38px, 5vw, 54px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+/* GALLERY BODY */
+
+.galleryContent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* Space between banner and gallery pictures */
+  padding: 62px 32px 85px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 0 30px;
+  color: #737b8c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* MASONRY GALLERY */
+
+.grid {
+  width: 100%;
+  column-count: 4;
+
+  /* No gaps between gallery columns */
+  column-gap: 0;
+}
+
+.grid {
+  width: 100%;
+  column-count: 4;
+  column-gap: 8px;
+}
+
+.photo {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 0;
+  overflow: hidden;
+  break-inside: avoid;
+  background: #10182d;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* Different picture heights */
+
+.photo:nth-child(4n + 1) {
+  aspect-ratio: 1.18 / 1;
+}
+
+.photo:nth-child(4n + 2) {
+  aspect-ratio: 0.88 / 1;
+}
+
+.photo:nth-child(4n + 3) {
+  aspect-ratio: 1.05 / 1;
+}
+
+.photo:nth-child(4n) {
+  aspect-ratio: 0.92 / 1;
+}
+
+.photo img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.04);
+}
+
+/* IMAGE CAPTIONS */
+
+.photo figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 12px 10px;
+  background: linear-gradient(
+    transparent,
+    rgba(8, 13, 24, 0.82)
+  );
+  color: #ffffff;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  font-weight: 700;
+}
+
+.photo figcaption span:last-child {
+  color: #e2c36d;
+}
+
+/* BOTTOM NOTE */
+
+.note {
+  margin: 25px 0 0;
+  color: #7a8190;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .galleryContent {
+    padding: 50px 24px 75px;
+  }
+
+  .grid {
+    column-count: 3;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .heading {
+    min-height: 185px;
+    background-position: center;
+  }
+
+  .headingContent {
+    padding: 35px 20px;
+  }
+
+  .heading h1 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .galleryContent {
+    padding: 42px 16px 65px;
+  }
+
+  .intro {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .grid {
+    column-count: 2;
+  }
+
+  .photo figcaption {
+    font-size: 7px;
+    padding: 22px 8px 8px;
+  }
+
+  .note {
+    font-size: 11px;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 360px) {
+  .heading h1 {
+    font-size: 31px;
+  }
+
+  .galleryContent {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

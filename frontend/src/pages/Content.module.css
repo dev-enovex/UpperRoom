@@ -14,22 +14,282 @@
 .pillarList article>span,.number{font-size:10px;letter-spacing:.16em;color:#b08b37;font-weight:700;white-space:nowrap}
 .pillarList h3{font:600 20px 'Playfair Display';color:#17213b;margin:0 0 8px}
 .pillarList p{font-size:13px;line-height:1.8;color:#70788a;margin:0}
-.initiativeList{margin-top:48px;border-top:1px solid #e8e4da}
-.initiativeList article{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:36px 0;border-bottom:1px solid #e8e4da}
-.initiativeIcon{width:58px;height:58px;background:#f4f0e5;display:grid;place-items:center;color:#a9842d}
-.initiativeIcon svg{width:27px;height:27px}
-.initiativeList h2{font:600 27px 'Playfair Display';color:#17213b;margin:9px 0 12px}
-.initiativeList p{font-size:14px;line-height:1.9;color:#687083;max-width:790px}
-.initiativeList blockquote{border-left:2px solid #c7a64f;padding-left:18px;color:#48536a;line-height:1.8;font-size:13px;max-width:780px}
+
+/* INITIATIVES SECTION */
+.initiativeList {
+  margin-top: 48px;
+  border-top: 1px solid #e8e4da;
+}
+
+.initiativeList article {
+  display: grid;
+  grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+  gap: 42px;
+  align-items: center;
+  padding: 45px 0;
+  border-bottom: 1px solid #e8e4da;
+}
+
+/* INITIATIVE PHOTOGRAPHS */
+.initiativePhoto {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  overflow: hidden;
+  background: #10182d;
+  border-radius: 0 75px 0 0;
+  box-shadow: 0 15px 35px rgba(16, 24, 45, 0.10);
+}
+
+.initiativePhoto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.initiativePhoto:hover img {
+  transform: scale(1.045);
+}
+
+.initiativePhoto figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 18px 13px;
+  background: linear-gradient(
+    transparent,
+    rgba(9, 16, 31, 0.78)
+  );
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.initiativePhoto figcaption span {
+  color: #e2c66f;
+}
+
+/* INITIATIVE WRITE-UP */
+.initiativeContent {
+  min-width: 0;
+}
+
+.initiativeHeading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+
+.initiativeIcon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #a9842d;
+  background: #f4f0e5;
+}
+
+.initiativeIcon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.number {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #b08b37;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.initiativeList h2 {
+  font: 600 28px/1.3 'Playfair Display', Georgia, serif;
+  color: #17213b;
+  margin: 0 0 15px;
+}
+
+.initiativeList p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #687083;
+  margin: 0 0 15px;
+  text-align: justify;
+}
+
+.initiativeList blockquote {
+  border-left: 3px solid #c7a64f;
+  padding: 10px 0 10px 18px;
+  margin: 23px 0;
+  color: #48536a;
+  line-height: 1.85;
+  font-size: 13px;
+  max-width: 100%;
+  background: #faf9f6;
+}
+
+.inlineAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #8a6a23;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 8px;
+  transition: gap 0.25s ease;
+}
+
+.inlineAction:hover {
+  gap: 13px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .initiativeList article {
+    grid-template-columns: minmax(240px, 40%) minmax(0, 1fr);
+    gap: 25px;
+    padding: 35px 0;
+  }
+
+  .initiativePhoto {
+    height: 280px;
+    border-radius: 0 55px 0 0;
+  }
+
+  .initiativeList h2 {
+    font-size: 25px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .initiativeList {
+    margin-top: 32px;
+  }
+
+  .initiativeList article {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding: 30px 0 35px;
+  }
+
+  .initiativePhoto {
+    height: 250px;
+    border-radius: 0 55px 0 0;
+  }
+
+  .initiativeContent {
+    padding: 0 2px;
+  }
+
+  .initiativeHeading {
+    margin-bottom: 12px;
+  }
+
+  .initiativeList h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  .initiativeList p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .initiativeList blockquote {
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .initiativePhoto {
+    height: 215px;
+    border-radius: 0 42px 0 0;
+  }
+
+  .initiativeList h2 {
+    font-size: 23px;
+  }
+}
+
 .inlineAction,.connectGrid a,.partnerGrid a,.partnerClosing a{display:inline-flex;align-items:center;gap:8px;color:#8a6a23;font-weight:700;font-size:12px;margin-top:8px}
-.profileLayout{display:grid;grid-template-columns:minmax(280px,380px) minmax(0,1fr);gap:48px;align-items:start;margin-top:48px}
-.profilePhoto{margin:0;position:relative;top:auto;width:100%;max-width:380px;background:#10182d;overflow:hidden;border:1px solid #e6dfcf;box-shadow:0 18px 45px #10182d18}
-.profilePhoto img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center center;background:#10182d}
-.profilePhoto figcaption{display:flex;flex-direction:column;gap:5px;padding:16px 18px;color:#e3c66f;font-size:11px;font-weight:700;letter-spacing:.12em}
-.profilePhoto figcaption span{color:#c6cad4;font-size:9px;letter-spacing:.2em}
+.profileLayout {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.profilePhoto {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: #10182d;
+  overflow: hidden;
+  border: 1px solid #e6dfcf;
+  box-shadow: 0 18px 45px rgba(16, 24, 45, 0.09);
+}
+
+.profilePhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  background: #10182d;
+}
+
+.profilePhoto figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 18px;
+  color: #e3c66f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.profilePhoto figcaption span {
+  color: #c6cad4;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
 .profileMonogram span{font:700 9px 'DM Sans';letter-spacing:.2em;margin-top:12px}
-.profileLayout .prose{margin-top:0; text-align: justify;}
-.profileLayout .prose h2{margin-top:0}
+.profileLayout .prose {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  visibility: visible;
+  opacity: 1;
+  color: #687083;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+.profileLayout .prose h2 {
+  margin: 0 0 18px;
+  color: #17213b;
+  font: 600 29px/1.35 'Playfair Display', Georgia, serif;
+}
 .connectGrid,.partnerGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}
 .connectGrid article,.partnerGrid article{padding:28px;background:#f6f4ee;position:relative}
 .connectGrid article>span,.partnerGrid article>span{position:absolute;right:22px;top:20px;color:#b08b37;font-size:10px;letter-spacing:.16em}
@@ -42,4 +302,212 @@
 .partnerClosing h2{font:600 29px 'Playfair Display';margin:0 0 14px}
 .partnerClosing p{font-size:14px;line-height:1.8;color:#c6cad4;max-width:10000px; text-align: justify;}
 .partnerClosing a{color:#e3c66f}
-@media(max-width:760px){.page{padding:65px 20px 80px}.pillarList,.connectGrid,.partnerGrid{grid-template-columns:1fr}.profileLayout{grid-template-columns:minmax(0,1fr);gap:25px}.profilePhoto{position:relative;top:auto;max-width:420px;margin:0 auto;width:100%}.profilePhoto img{height:auto;max-height:none;object-fit:contain}.initiativeList article{grid-template-columns:55px 1fr;gap:14px}.initiativeIcon{width:48px;height:48px}}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .initiativeList {
+    margin-top: 32px;
+  }
+
+  .initiativeList article {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 28px 0 35px;
+    align-items: start;
+  }
+
+  /* Responsive initiative photographs */
+  .initiativePhoto {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    border-radius: 0 48px 0 0;
+    overflow: hidden;
+    background: #10182d;
+  }
+
+  .initiativePhoto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .initiativePhoto figcaption {
+    padding: 25px 13px 11px;
+    font-size: 8px;
+  }
+
+  .initiativeContent {
+    width: 100%;
+    min-width: 0;
+    padding: 0 2px;
+  }
+
+  .initiativeHeading {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .initiativeIcon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .initiativeIcon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .number {
+    font-size: 9px;
+  }
+
+  .initiativeList h2 {
+    font-size: 25px;
+    line-height: 1.35;
+    margin: 0 0 12px;
+  }
+
+  .initiativeList p {
+    font-size: 13px;
+    line-height: 1.85;
+    margin-bottom: 13px;
+    text-align: left;
+  }
+
+  .initiativeList blockquote {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 10px 12px;
+    margin: 18px 0;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .initiativeList article {
+    gap: 17px;
+    padding: 24px 0 30px;
+  }
+
+  .initiativePhoto {
+    aspect-ratio: 1 / 1;
+    border-radius: 0 38px 0 0;
+  }
+
+  .initiativePhoto img {
+    object-position: center center;
+  }
+
+  .initiativePhoto figcaption {
+    font-size: 7px;
+    padding: 22px 10px 9px;
+  }
+
+  .initiativeList h2 {
+    font-size: 23px;
+  }
+
+  .initiativeList p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
+
+/* Full-width editorial banner used consistently across the public information pages. */
+.pageHero{position:relative;left:50%;transform:translateX(-50%);width:100vw;min-height:225px;padding:54px max(24px,calc((100vw - 1120px)/2));display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:linear-gradient(90deg,rgba(9,16,31,.88),rgba(9,16,31,.28)),url('mug.jpg') center 42%/cover no-repeat;color:#fff;margin:-82px 0 55px}
+.pageHero .kicker{color:#e2c66f}.pageHero h1{font:600 clamp(34px,4.2vw,54px)/1.12 'Playfair Display',serif;color:#fff;margin:12px 0;max-width:780px}.pageHero h1 em{color:#e2c66f}.pageHero .lead{max-width:760px;color:#e0e3e9;font-size:14px;line-height:1.75;margin:0}
+.page> .prose,.page> .pillarList,.page> .page> .profileLayout,.page> .connectGrid,.page> .partnerGrid,.page> .partnerClosing{position:relative}
+@media(max-width:760px){.pageHero{min-height:190px;padding:42px 20px;margin:-65px 0 38px}.pageHero h1{font-size:clamp(32px,9vw,43px)}.pageHero .lead{font-size:13px}.page{padding-top:65px}}
+@media(max-width:420px){.pageHero{padding-inline:17px}.pageHero h1{font-size:32px}}
+
+/* LEADERSHIP RESPONSIVE FIX */
+@media (max-width: 760px) {
+  .profileLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .profilePhoto {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .profilePhoto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .profileLayout .prose {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .profileLayout .prose h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .profileLayout .prose p {
+    display: block;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+    visibility: visible;
+    opacity: 1;
+    text-align: justify;
+  }
+
+  .profileLayout .prose blockquote {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 23px 0;
+    padding-left: 16px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 420px) {
+  .profileLayout {
+    gap: 23px;
+    margin-top: 25px;
+  }
+
+  .profilePhoto {
+    max-width: 100%;
+  }
+
+  .profileLayout .prose h2 {
+    font-size: 24px;
+  }
+
+  .profileLayout .prose p {
+    font-size: 12.5px;
+    line-height: 1.85;
+  }
+
+  .profileLayout .prose blockquote {
+    font-size: 17px;
+  }
+}
+

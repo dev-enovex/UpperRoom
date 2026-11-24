@@ -9,7 +9,7 @@ const pillars = [
 ];
 export default function Vision() {
  return <section className={styles.page}>
-  <span className={styles.kicker}>OUR VISION & MISSION</span><h1>Kingdom influence in <em>every sphere.</em></h1>
+  <header className={styles.pageHero}><span className={styles.kicker}>OUR VISION & MISSION</span><h1>Kingdom influence in <em>every sphere.</em></h1></header>
   <div className={styles.prose}>
    <h2>Our Vision</h2>
    <p>To see the Kingdom of God advance in practical ways across every sector of society; to see the Church of Jesus Christ become highly esteemed through its contribution to the good of mankind; and to see the government, wisdom and values of God's Kingdom influence the decisions, leadership and structures of the governments of our world.</p>
