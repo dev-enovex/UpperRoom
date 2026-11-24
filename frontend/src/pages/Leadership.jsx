@@ -5,7 +5,7 @@ export default function Leadership() {
     <section className={styles.page}>
       <header className={styles.pageHero}><span className={styles.kicker}>LEADERSHIP</span>
       <h1>Meet our <em>Lead Visionary</em></h1>
-      <p className={styles.lead}>Ijoma, Chisom Jessica · Lead Visionary, Upper Room SOAR Company</p></header>
+      <p className={styles.lead}>Lead Visionary, Upper Room SOAR Company</p></header>
 
       <div className={styles.profileLayout}>
         <figure className={styles.profilePhoto}>

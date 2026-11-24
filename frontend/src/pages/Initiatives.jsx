@@ -13,7 +13,7 @@ const items = [
   {
     icon: BookOpen,
     title: 'SOAR Summit',
-    image: '/gallery/soar-summit-03.jpg',
+    image: '/gallery/soar-summit-19.jpg',
     imageAlt: 'Speakers and participants gathered during the SOAR Summit',
     body: 'Our flagship gathering is designed to equip believers spiritually and professionally for effective engagement with the different spheres of human influence.',
     detail: 'It brings together spiritual teachings from seasoned ministers and practical professional insights from experienced practitioners. Interactive workshops help participants gain relevant knowledge, practical skills and perspectives. The Summit also creates opportunities for professional networking, mentorship and meaningful connections.',
@@ -22,7 +22,7 @@ const items = [
   {
     icon: HeartHandshake,
     title: 'Community Outreach',
-    image: '/gallery/soar-summit-04.jpg',
+    image: '/gallery/outreach.jpeg',
     imageAlt: 'A participant engaging during a community-focused programme',
     body: 'We take the Gospel beyond the walls of the church through evangelism and community-based interventions.',
     detail: 'These include medical outreaches, skill-acquisition initiatives and other practical expressions of God’s love that respond to the needs of the communities we serve. Our outreaches communicate the Gospel in both word and deed, demonstrating the love of Christ while contributing to community well-being and development.'
@@ -30,7 +30,7 @@ const items = [
   {
     icon: GraduationCap,
     title: 'SOAR Academy',
-    image: '/gallery/soar-summit-16.jpg',
+    image: '/gallery/OLA_3920.jpg',
     imageAlt: 'Participants taking notes during a learning session',
     body: 'SOAR Academy is our skills-development initiative committed to equipping individuals with practical and professional skills that enhance their capacity for productive engagement and economic contribution.',
     detail: 'Through accessible training programmes offered at subsidized rates and, where possible, scholarship opportunities, we create avenues for individuals to acquire relevant skills and develop their potential.'
@@ -38,7 +38,7 @@ const items = [
   {
     icon: Users,
     title: 'Fellowship and Discipleship',
-    image: '/gallery/soar-summit-18.jpg',
+    image: '/gallery/soar-summit-11.jpg',
     imageAlt: 'Participants sharing fellowship during a gathering',
     body: 'We cultivate a community of believers committed to prayer, the study of God’s Word, spiritual growth, mutual edification and the development of Christlike character.',
     detail: 'Through regular fellowship, prayer gatherings and Bible study, we encourage believers to grow in their knowledge of God, deepen their relationship with the Holy Spirit and develop the spiritual foundations necessary for a life of effective service.'
